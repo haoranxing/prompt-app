@@ -136,7 +136,7 @@ if (adminCount.c === 0) {
   const bcrypt = require('bcryptjs');
   const hash = bcrypt.hashSync('admin123', 10);
   db.prepare("INSERT INTO users (phone, password, nickname, role) VALUES (?, ?, ?, ?)")
-    .run('13800000000', hash, '高级管理员', 'superadmin');
+    .run('secret-mima-username', hash, '高级管理员', 'superadmin');
 }
 
 module.exports = db;
